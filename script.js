@@ -21,56 +21,55 @@ function getUserChoice () {
 
 function game (pc, user) {
 
+    let lost = 1, won = 1, tied = 1;
     let times = prompt("How many times do you want to play?");
     let times1 = parseInt(times);
 
     for (i = 1; i <= times1; i++) {
-        var won = 1;
-        var tied = 1;
-        var lost = 1;
 
         user = getUserChoice();
         pc = getComputerChoice();
 
         if (user == 'rock' && pc == 'rock' ) {
+            tied++;
             alert('Tie');
-            tied = tied++;
         }
         else if (user == 'rock' && pc == 'paper' ) {
+            lost++;
             alert('You Lose! Paper beats Rock');
-            lost = lost++;
         }
         else if (user == 'rock' && pc == 'scissors' ) {
+            won++;
             alert('You Win! Rock beats Scissors');
-            won = won++;
         }
         else if (user == 'paper' && pc == 'paper' ) {
+            tied++;
             alert('Tie');
-            tied = tied++;
         }
         else if (user == 'paper' && pc == 'scissors' ) {
+            lost++;
             alert('You Lose! Scissors beats Paper');
-            lost = lost++;
         }
         else if (user == 'paper' && pc == 'Rock' ) {
+            won++;
             alert('You Win! Paper beats Rock');
-            won = won++;
         }
         else if (user == 'scissors' && pc == 'paper' ) {
+            won++;
             alert('You Win! scissors beats Paper');
-            won = won++;
         }
         else if (user == 'scissors' && pc == 'scissors' ) {
+            tied++;
             alert('Tie');
-            tied = tied++;
         }
         else if (user == 'scissors' && pc == 'Rock' ) {
+            lost++;
             alert('You Lose! Rock beats Scissors');
-            lost = lost++;
         }
         
         else {
             alert('Not valid');
+            times1++
         }
     }
 
