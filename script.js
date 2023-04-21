@@ -1,7 +1,7 @@
 const computerChoice = {
-    a: "Rock",
-    b: "Paper",
-    c: "Scissors",
+    a: "rock",
+    b: "paper",
+    c: "scissors",
 };
 
 function getComputerChoice () {
@@ -14,4 +14,6 @@ function getComputerChoice () {
     console.log(key);
 }
 
-getComputerChoice();
+let userChoice = prompt("Type: Rock, Paper or Scissor");
+let userChoiceStandard = userChoice.toLowerCase();
+console.log(userChoiceStandard);
